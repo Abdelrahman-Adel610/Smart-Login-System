@@ -14,11 +14,6 @@ var UserNameRegex=/^[A-Z][a-z]{1,15}$/
 var UserMailRegex=/^(\w|\d)(\w|\s|\d)+@[a-zA-Z]{4,}\.com$/
 var UserPasswordRegex=/(\w|\d){3,}[#$%&*^!/]+(\w|\d)+$/
 var Users=[];
-var pathparts = location.pathname.split('/');
-var baseURL = ''
-for (var i = 0; i < pathparts.length - 1; i++) {
-    baseURL += '/' + pathparts[i]
-}
 if(localStorage.getItem("Users"))
 {
     Users=JSON.parse(localStorage.getItem("Users"))
@@ -163,13 +158,8 @@ LoginBtn.addEventListener("click",function()
     if(searchUser())
     {
         indx=searchUser();
-        if (baseURL == '/') {
-            location.replace('https://' + location.hostname + '/home.htm')
-
-        } else {
-            location.replace(baseURL + '/home.htm')
-
-        }    }
+        location.replace("https://abdelrahman-adel610.github.io/Smart-Login-System/home.htm")
+   }
     else
     {
         if(loginMail.value==""||loginPass.value=="")
@@ -188,12 +178,7 @@ if(document.URL.includes("home"))
 }
 if(LogOut)
 LogOut.addEventListener("click",function(){
-    if (baseURL == '/') {
-        location.replace('https://' + location.hostname + '/index.htm')
-
-    } else {
-        location.replace(baseURL + '/index.htm')
-    }
+    location.replace("https://abdelrahman-adel610.github.io/Smart-Login-System/index.htm")
     RemoveMainUser();
 })
 function RemoveMainUser()
