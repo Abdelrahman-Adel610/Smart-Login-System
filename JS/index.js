@@ -14,6 +14,11 @@ var UserNameRegex=/^[A-Z][a-z]{1,15}$/
 var UserMailRegex=/^(\w|\d)(\w|\s|\d)+@[a-zA-Z]{4,}\.com$/
 var UserPasswordRegex=/(\w|\d){3,}[#$%&*^!/]+(\w|\d)+$/
 var Users=[];
+var pathparts = location.pathname.split('/');
+var baseURL = ''
+for (var i = 0; i < pathparts.length - 1; i++) {
+    baseURL += '/' + pathparts[i]
+}
 if(localStorage.getItem("Users"))
 {
     Users=JSON.parse(localStorage.getItem("Users"))
@@ -151,10 +156,7 @@ return false;
 }
 
 
-var baseURL = ''
-var pathparts = location.pathname.split('/');
-for (var i = 0; i < pathparts.length - 1; i++) {
-    baseURL += '/' + pathparts[i]}
+
     if(LoginBtn)
 LoginBtn.addEventListener("click",function()
 {
