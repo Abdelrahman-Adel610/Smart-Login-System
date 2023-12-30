@@ -1,0 +1,43 @@
+body{
+    background-color: #24353F;
+}
+ h1
+{
+    color: #17a2b8;
+}
+ .main 
+{
+    box-shadow: 0px 0px 10px black;
+}
+input::placeholder
+{
+    color: #ced4da !important;
+}
+ .main input
+{
+    background-color: transparent !important;
+    color: white !important;
+    border-color: #ced4da;
+}
+ .main button
+{
+    background-color: transparent;
+    color:#17a2b8 ;
+    border-color: #17a2b8;
+    transition: .3s;
+}
+ .main button:hover
+{
+    background-color:#17a2b8 ;
+    color: #fff;
+}
+ .main a
+{
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+ .main a:hover
+{
+    text-decoration: underline;
+}
